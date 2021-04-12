@@ -1,0 +1,23 @@
+.nadpis1 {
+    font-size: 40px;
+    background-color: darkred;
+    color: white;
+}
+
+.nadpis2 {
+    font-size: 25px;
+    background-color: rgb(31, 27, 27);
+    color: white;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+nav.navbar-dark {
+    background-color:  rgba(0,0,0,0.5) !important;
+}
+
+.obrazek {
+    text-align: center;
+}
