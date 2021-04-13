@@ -18,7 +18,7 @@
     <header class="jumbotron-fluid" style="background-color: darkred;">
         <h1 class="text-white display-2 text-center p-4" style="font-size: 100px;"><strong>Kanada</strong></h1>
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-            <a class="navbar-brand" href="#"><img src="img/kanada_vlajka_denik-630-16x9.jpg" alt="Státní znak Kanady"
+            <a class="navbar-brand" href="#" id="vlajka"><img src="img/kanada_vlajka_denik-630-16x9.jpg" alt="Státní znak Kanady"
                     style="height: 40px;" /></a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
                 data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
@@ -31,10 +31,10 @@
                         <a class="nav-link" href="index.html">Úvodní stránka</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#Nazev">Vznik názvu</a>
+                        <a class="nav-link" href="#nazev">Vznik názvu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#Historie">Historie</a>
+                        <a class="nav-link" href="#historie">Historie</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Politika</a>
@@ -50,7 +50,7 @@
         </nav>
     </header>
 
-    <div class="container border mt-5 mb-5">
+    <div id="maindiv" class="container border mt-5 mb-5">
         <div class="row">
             <main class="col-lg-8">
                 <section id="uvod">
@@ -95,7 +95,7 @@
                         hustotu osídlení. Hlavním městem Kanady je Ottawa, třemi nejlidnatějšími městy jsou Toronto,
                         Montreál a Vancouver. Kanada je zakládajícím členem NATO.</p>
                 </section>
-                <section id="Nazev">
+                <section id="nazev">
                     <h2 class="nadpis1">Vznik názvu</h2>
                     <p>
                         Název Canada pochází z řeči prvních národů – konkrétněji kmene Huronů – a zní kanata a do
@@ -127,8 +127,8 @@
                         svátku Dominion Day na Canada Day.
                     </p>
                 </section>
-                <section>
-                    <h2 class="nadpis1" id="Historie">Historie</h2>
+                <section id="historie">
+                    <h2 class="nadpis1">Historie</h2>
                     <h3 class="nadpis2">Indiánské osídlení</h3>
                     <p>
                     <div class="obrazek"><img src="img/indian.jpg" alt="Indian"></div>
@@ -371,7 +371,7 @@
                 </section>
             </main>
             <aside class="col-lg-4">
-                <section id="Vseobecneinformace">
+                <section id="vseobecneinformace">
                     <h2 class="nadpis4">Všeobecné informace</h2>
                     <h4>
                         Kanada-
@@ -404,6 +404,30 @@
             </aside>
         </div>
     </div>
+    <div id="les">
+        <img src="img/les.jpg" alt="forest">
+    </div>
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">     
+
+            </div> 
+            <div class="col-sm-6">
+                <p>Autor: Lukáš Kůžel</p>
+                <p>&copy; 2021, SŠPU Opava</p>
+                <p>Zdroj informací</p>
+                <p><a href="https://cs.wikipedia.org/wiki/Kanada">Zdroj</a></p>
+            </div>
+        </div> 
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+        <script src="js/jquery.js"></script>
 </body>
 
 </html>
