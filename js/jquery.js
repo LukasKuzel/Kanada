@@ -118,6 +118,18 @@ const articles = [
             "eko.jpg",
         ]
     },
+    {
+        "title": "Kanada zveřejnila databázi záznamů o UFO",
+        "text": "Nedlouho poté, co americká CIA pro potřeby Kongresu odtajnila své zprávy ohledně fenoménu UFO, přichází se zveřejněním podobných dokumentů také Kanada. Jedná se o databázi, která mimo jiné zahrnuje také záznamy o neidentifikovaných létajících objektech, které v posledních letech nahlásili piloti komerčních letů, informoval deník Daily Mail. Záznamy o UFO (unidentified flying object, neidentifikovaný létající objekt) jsou uvedeny v databázi CADORS (Civil Aviation Daily Occurrence Reporting System), kterou spravuje vládní agentura Transport Canada. V databázi je téměř 300 tisíc záznamů, ty však nezahrnují pouze spatření UFO, ale i jakékoliv záznamy spojené s letadly. UFO nemusí nutně představovat vesmírnou loď s mimozemšťany, jde o jakýkoliv objekt na obloze, který je těžké identifikovat. A záznamů o takových objektech je ve výše zmíněné databázi celá řada.",
+        "date": "23. 4. 2021",
+        "author": "Martin Vlk",
+        "source": "https://www.novinky.cz/koktejl/clanek/kanada-zverejnila-databazi-zaznamu-o-ufo-40357974",
+        "likes": "56",
+        "dislikes": "43",
+        "gallery": [
+            "ufo.jpg",
+        ]
+    },
 
 ];
 
@@ -135,6 +147,7 @@ $(function () {
             </td>            
         </tr>`);
     });
+
     $(".event-detail").hide();
     $("#HistorieANovinky table").on("click", function () {
         $("#HistorieANovinky .event-detail").slideToggle(2000);
@@ -171,6 +184,47 @@ $(function () {
             fillPersonCard(person);
         });
         $("#portret").show(2000);
+    });
+
+    $("#Clanky h2").on("click", function () {
+        $("#Clanky h3").slideToggle(2000);
+        $("#Clanky .row").slideToggle(2000);
+    });
+
+    articles.forEach((article)=>{
+        $("#novinky").append(`    
+        <div class="col-sm-6 mt-3 pb-3 border-bottom">
+          <article>
+            <figure>
+              <img src="img/${article.gallery[0]}" alt="${article.title}" class="img-fluid">
+            </figure>
+            <h3>${article.title}</h3>
+            <div class="article-text">
+                <p>${article.text}</p>
+                <p><a href="${article.source}" target="_new">Celý článek</a></p>
+            </div>
+            <div class="article-footer">Autor: ${article.author} 
+            <button type="button" class="btn btn-success likes"><i class="fas fa-thumbs-up"></i> <span class="badge badge-light">${article.likes}</span></button>
+            <button type="button" class="btn btn-danger dislikes"><i class="fas fa-thumbs-down"></i> <span class="badge badge-light">${article.dislikes}</span></button>
+            </div>
+          </article>
+        </div>        
+    `);    
+    });
+
+    $(".article-text").hide();
+    $("#Clanky h3").on("click", function () {
+    $("#Clanky .article-text").slideToggle(2000);
+    });
+
+    $(".likes").on("click", function(){
+        let likes = parseInt($(this).find("span").text());
+        $(this).find("span").text(likes + 1);
+    });
+
+    $(".dislikes").on("click", function(){
+        let dislikes = parseInt($(this).find("span").text());
+        $(this).find("span").text(dislikes + 1);
     });
 
 });
