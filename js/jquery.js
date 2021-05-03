@@ -1,17 +1,17 @@
 /*Úvodní stránka*/
 $(function () {
     $("#uvod h2").on("click", function () {
-        $("#uvod h3").toggle(3000)
+        $("#uvod h3").slideToggle(3000)
         $("#uvod p").hide(2000)
     });
     $("#uvod h3").on("click", function () {
         $("#uvod p").show(2000)
     });
     $("#nazev h2").on("click", function () {
-        $("#nazev p").toggle(2000)
+        $("#nazev p").slideToggle(2000)
     });
     $("#historie h2").on("click", function () {
-        $("#historie h3").toggle(3000)
+        $("#historie h3").slideToggle(3000)
         $("#historie p").hide(2000)
         $("#historie img").hide(2000)
     });
@@ -20,7 +20,7 @@ $(function () {
         $("#historie img").show(2000)
     });
     $("#vseobecneinformace h2").on("click", function () {
-        $("#vseobecneinformace h4").toggle(3000)
+        $("#vseobecneinformace h4").slideToggle(3000)
         $("#vseobecneinformace p").hide(2000)
         $("#vseobecneinformace img").hide(2000)
     });
@@ -29,9 +29,9 @@ $(function () {
         $("#vseobecneinformace img").show(2000)
     });
     $("#vlajka").on("click", function () {
-        $("#maindiv").toggle(3000)
-        $("#maindiv2").toggle(3000)
-        $("footer").toggle(3000)
+        $("#maindiv").slideToggle(3000)
+        $("#maindiv2").slideToggle(3000)
+        $("footer").slideToggle(3000)
     });
 
 });
@@ -66,7 +66,7 @@ const heroes = [
         "death": "--",
         "biography": "Alžběta II.  je v současné době vládnoucí královna šestnácti nezávislých států označovaných jako Commonwealth realm. Jedná se o státy Antigua a Barbuda, Austrálie, Bahamy, Barbados, Belize, Grenada, Jamajka, Kanada, Nový Zéland, Papua Nová Guinea, Svatý Kryštof a Nevis, Svatá Lucie, Svatý Vincenc a Grenadiny, Šalomounovy ostrovy, Tuvalu a Spojené království Velké Británie a Severního Irska. V každé této zemi je považována za panovnici samostatného státu a plnění královských povinností pro každou zemi je oddělené. Je také nejvyšší představitelkou anglikánské církve. Britskou královnou se stala ve svých 25 letech po smrti svého otce Jiřího VI. dne 6. února 1952. V dlouhém období její vlády došlo k zániku Britského impéria (proces, který byl zahájen již za jejího otce) a následnému vzniku Commonwealthu. Poté, co britské kolonie získávaly nezávislost, se stala královnou několika nově osamostatněných zemí. Některé z nich později změnily svůj status na republiku. V září 2015 překonala v délce vlády svoji praprababičku, britskou královnu a indickou císařovnu Viktorii, a stala se tak nejdéle vládnoucím panovníkem v anglických a britských dějinách. Od října 2016 po smrti thajského krále Pchúmipchona Adunjadéta (Rámy IX.) se stala nejdéle vládnoucím žijícím monarchou na světě.",
         "portraits": [
-            "img/AlzbetaII.jpg",
+           "AlzbetaII.jpg"
         ],
         "online": "https://cs.wikipedia.org/wiki/Alžběta_II."
     },
@@ -76,7 +76,7 @@ const heroes = [
         "death": "--",
         "biography": "Justin Pierre James Trudeau e kanadský politik a od listopadu 2015 premiér Kanady, když jako lídr Liberální strany dovedl opoziční uskupení k vítězství v říjnových parlamentních volbách 2015. Je nejstarším synem bývalého kanadského ministerského předsedy Pierra Trudeaua (1919–2000) a spisovatelky a herečky Margaret Trudeauové. V letech 2008 a 2011 byl zvolen poslancem Dolní sněmovny ve volebním obvodu Papineau. Ve stínovém kabinetu spravoval gesce mládeže, multikulturalismu, občanství, imigrace, vzdělání po sekundárním stupni a amatérského sportu. V dubnu 2013 se stal předsedou Liberální strany, v jejímž čele dosáhl vítězství ve všeobecných volbách 2015 umožňující mu sestavit většinovou vládu.",
         "portraits": [
-            "img/JustinTru",
+            "JustinTru.jpg"
         ],
         "online": "https://cs.wikipedia.org/wiki/Justin_Trudeau"
     },
@@ -86,7 +86,7 @@ const heroes = [
         "death": "--",
         "biography": "Julie Payetteová je kanadská inženýrka, astronautka a politička. Původně působila jako inženýrka a výzkumná pracovnice různých počítačových společností a od června 1992 jednou z kanadských astronautů. Uskutečnila dva krátkodobé kosmické lety, oba na Mezinárodní vesmírnou stanici. Poprvé vzlétla do vesmíru roku 1999 v raketoplánu Discovery při letu STS-96, podruhé roku 2009 v raketoplánu Endeavour při misi STS-127. Celkem ve vesmíru prožila 25 dní, 11 hodin a 58 minut. Mezi lety 2017–2021 byla generální guvernérkou Kanady.",
         "portraits": [
-            "img/JuliePay.jpg",
+            "JuliePay.jpg"
         ],
         "online": "https://cs.wikipedia.org/wiki/Julie_Payetteová"
     },
@@ -103,7 +103,7 @@ const articles = [
         "likes": "125",
         "dislikes": "2",
         "gallery": [
-            "img/druz.jpg",
+            "druz.jpg",
         ]
     },
     {
@@ -115,7 +115,7 @@ const articles = [
         "likes": "161",
         "dislikes": "36",
         "gallery": [
-            "img/eko.jpg",
+            "eko.jpg",
         ]
     },
 
@@ -123,7 +123,7 @@ const articles = [
 
 $(function () {
     $("#HistorieANovinky h2").on("click", function () {
-        $("#HistorieANovinky .row").toggle(2000);
+        $("#HistorieANovinky .row").slideToggle(2000);
     });
 
     events.forEach((event)=>{
@@ -137,6 +137,40 @@ $(function () {
     });
     $(".event-detail").hide();
     $("#HistorieANovinky table").on("click", function () {
-        $("#HistorieANovinky .event-detail").toggle(2000);
+        $("#HistorieANovinky .event-detail").slideToggle(2000);
     });
+
+    $("#KanadskePostavy h2").on("click", function () {
+        $("#KanadskePostavy .row").slideToggle(2000);
+    });
+
+    heroes.forEach((hero)=>{
+        $("#KanadskePostavy .list-group").append(`<li class="list-group-item list-group-item-action list-group-item-primary">${hero.name}</li>`);
+    });
+
+    function fillPersonCard(person) {
+        let hero = heroes.find(item => {return item.name === person});
+        $(".card-header").html(`<i class="fas fa-star-of-life"></i> <b>${hero.birth}</b> - <i class="fas fa-cross"></i> <b>${hero.death}</b>`);
+        $(".card-title").text(hero.name);
+        $(".card-text").text(hero.biography);
+        $(".card-footer").html(`Odkaz: <a href="${hero.online}">${hero.online}</a>`);
+        $(".gallery").empty();
+        for (let i = 0; i < hero.portraits.length; i++) {
+            $(".gallery").append(`<div class="col-sm-4"><a href="#"><img src="img/${hero.portraits[i]}" alt="" class="img-fluid"></a></div>`);        
+        }
+    }
+
+    $("#postavy li:first").addClass('active');
+    fillPersonCard(heroes[0].name);
+
+    $("#postavy li").on("click", function(){
+        $("#postavy li").removeClass("active");
+        $(this).addClass("active");        
+        let person = $(this).text();
+        $("#portret").show(2000, function(){
+            fillPersonCard(person);
+        });
+        $("#portret").show(2000);
+    });
+
 });

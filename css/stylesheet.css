@@ -86,3 +86,11 @@ h3 {
 #LetopocetUdalosti p{
     font-size: 20px; 
 }
+
+.mid {
+    text-align: center;
+}
+
+.list-group {
+    cursor: pointer;
+}
