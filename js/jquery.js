@@ -134,6 +134,7 @@ const articles = [
 ];
 
 $(function () {
+    function eventsLog(events){
     $("#HistorieANovinky h2").on("click", function () {
         $("#HistorieANovinky .row").slideToggle(2000);
     });
@@ -156,7 +157,9 @@ $(function () {
     $("#KanadskePostavy h2").on("click", function () {
         $("#KanadskePostavy .row").slideToggle(2000);
     });
+}
 
+function heroesLog(heroes){
     heroes.forEach((hero)=>{
         $("#KanadskePostavy .list-group").append(`<li class="list-group-item list-group-item-action list-group-item-primary">${hero.name}</li>`);
     });
@@ -185,7 +188,9 @@ $(function () {
         });
         $("#portret").show(2000);
     });
+}
 
+function articlesLog(articles){
     $("#Clanky h2").on("click", function () {
         $("#Clanky h3").slideToggle(2000);
         $("#Clanky .row").slideToggle(2000);
@@ -226,5 +231,41 @@ $(function () {
         let dislikes = parseInt($(this).find("span").text());
         $(this).find("span").text(dislikes + 1);
     });
+}
+
+
+fetch('../historie/data/events.json')
+     .then(response => {
+        return response.json();
+     })
+     .then(json =>{
+         eventsLog(json);
+     })
+     .catch(function(error){
+        console.error('Chyba: \n', error);
+     });
+
+fetch('../historie/data/heroes.json')
+     .then(response => {
+        return response.json();
+     })
+     .then(json =>{
+         heroesLog(json);
+     })
+     .catch(function(error){
+        console.error('Chyba: \n', error);
+     });
+
+fetch('../historie/data/articles.json')
+     .then(response => {
+        return response.json();
+     })
+     .then(json =>{
+         articlesLog(json);
+     })
+     .catch(function(error){
+        console.error('Chyba: \n', error);
+     });
+
 
 });
