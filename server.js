@@ -15,15 +15,27 @@ const server = http.createServer(app);
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/api/events', (req, res) => {
-    readJSON('historie/data/udalosti.json')
+    readJSON('historie/data/events.json')
     .then(data => res.send(data))
     .catch(err => res.send('Chyba lávky', err));
 });
 
 app.get('/api/events/:index', (req, res) => {
-    readJSON('historie/data/udalosti.json')
+    readJSON('historie/data/events.json')
     .then(data => res.send(data[req.params.index]))
     .catch(err => res.send('Chyba lávky', err));
+});
+
+app.get("/api/heroes", (req, res) => {
+    readJSON('historie/data/heroes.json')
+    .then(data => res.send(data))
+    .catch(err => res.send('Soubor nebylo možné načíst', err));       
+});
+
+app.get("/api/towns", (req, res) => {
+    readJSON('data-mapa/towns.json')
+    .then(data => res.send(data))
+    .catch(err => res.send('Soubor nebylo možné načíst', err));       
 });
 
 const PORT = process.env.PORT || 3000;
