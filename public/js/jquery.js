@@ -33,6 +33,10 @@ $(function () {
         $("#maindiv2").slideToggle(3000)
         $("footer").slideToggle(3000)
     });
+    $("#vlajka2").on("click", function () {
+        $("main").slideToggle(3000)
+        $("footer").slideToggle(3000)
+    });
 
 });
 

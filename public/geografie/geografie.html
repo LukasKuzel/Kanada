@@ -25,7 +25,7 @@
     <header class="jumbotron-fluid" style="background-color: darkred;">
         <h1 class="text-white display-2 text-center p-4" style="font-size: 100px;"><strong>Kanada</strong></h1>
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-            <a class="navbar-brand" href="#" id="mapa"><img src="../img/kanada_vlajka_denik-630-16x9.jpg" alt="mapay"
+            <a class="navbar-brand" href="#" id="vlajka2"><img src="../img/kanada_vlajka_denik-630-16x9.jpg" alt="mapay"
                     style="height: 40px;" /></a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
                 data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
@@ -62,10 +62,16 @@
             </div>
             <div class="row">
                 <div class="col-12" id="mapa">
-                    <p class="alert alert-success">
-                        <input type="checkbox" id="kraje" checked data-toggle="toggle" data-onstyle="success"> Kraje
-                        <input type="checkbox" id="mesta" checked data-toggle="toggle" data-onstyle="success"> Města
-                    </p>
+                    <div class="alert alert-success">
+                        <div class="row">
+                            <div class="col-6">
+                                <input class="red" type="checkbox" name="KRAJE" id="kraje" checked data-toggle="toggle" data-onstyle="success"> Kraje
+                            </div>
+                            <div class="col-6">
+                                <input class="red" type="checkbox" name="MESTA" id="mesta" checked data-toggle="toggle" data-onstyle="success"> Města
+                            </div>
+                        </div>            
+                    </div>
                     <div id="C-map">
                         <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
                             xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -163,59 +169,59 @@
                             <circle cx="772" cy="1231.6" id="circle90" />
                             <circle cx="783.4" cy="1233.4" id="circle92" />
                             <circle cx="700.4" cy="1283.5" id="circle94" />
-                            <rect x="776.86993" y="1191.5343" width="23.630058" height="16.065697" id="Quebec"
+                            <rect x="776.86993" y="1191.5343" width="16" height="16" id="Quebec"
                                 style="fill:#1a1a1a;stroke-width:1.06227648" inkscape:label="Québec">
                                 <title id="title96">Québec</title>
                             </rect>
-                            <rect x="177.46996" y="1177.5343" width="23.630058" height="16.065697" id="Victoria"
+                            <rect x="177.46996" y="1177.5343" width="16" height="16" id="Victoria"
                                 style="fill:#1a1a1a;stroke-width:1.06227648" inkscape:label="Victoria">
                                 <title id="title96-0">Victoria</title>
                             </rect>
-                            <rect x="390.59518" y="1144.7365" width="23.630058" height="16.065697" id="Regina"
+                            <rect x="390.59518" y="1144.7365" width="16" height="16" id="Regina"
                                 style="fill:#1a1a1a;stroke-width:1.06227648" inkscape:label="Regina">
                                 <title id="title96-2">Regina</title>
                             </rect>
-                            <rect x="479.85162" y="1137.1722" width="23.630058" height="16.065697" id="Winnipeg"
+                            <rect x="479.85162" y="1137.1722" width="16" height="16" id="Winnipeg"
                                 style="fill:#1a1a1a;stroke-width:1.06227648" inkscape:label="Winnipeg">
                                 <title id="title96-9">Winnipeg</title>
                             </rect>
-                            <rect x="679.29999" y="1270.5343" width="23.630058" height="16.065697" id="Toronto"
+                            <rect x="679.29999" y="1270.5343" width="16" height="16" id="Toronto"
                                 style="fill:#000000;stroke-width:1.06227648" inkscape:label="Toronto">
                                 <title id="title96-21">Toronto</title>
                             </rect>
-                            <rect x="290.74905" y="1084.2235" width="23.630058" height="16.065697" id="Edmonton"
+                            <rect x="290.74905" y="1084.2235" width="16" height="16" id="Edmonton"
                                 style="fill:#1a1a1a;stroke-width:1.06227648" inkscape:label="Edmonton">
                                 <title id="title96-4">Edmonton</title>
                             </rect>
-                            <rect x="302.85165" y="898.14667" width="23.630058" height="16.065697" id="Yellowknife"
+                            <rect x="302.85165" y="898.14667" width="16" height="16" id="Yellowknife"
                                 style="fill:#1a1a1a;stroke-width:1.06227648" inkscape:label="Yellowknife">
                                 <title id="title96-3">Yellowknife</title>
                             </rect>
-                            <rect x="47.184971" y="934.45435" width="23.630058" height="16.065697" id="Whitehorse"
+                            <rect x="47.184971" y="934.45435" width="16" height="16" id="Whitehorse"
                                 style="fill:#1a1a1a;stroke-width:1.06227648" inkscape:label="Whitehorse">
                                 <title id="title96-1">Whitehorse</title>
                             </rect>
-                            <rect x="803.76996" y="864.5343" width="23.630058" height="16.065697" id="Iqaluit"
+                            <rect x="803.76996" y="864.5343" width="16" height="16" id="Iqaluit"
                                 style="fill:#1a1a1a;stroke-width:1.06227648" inkscape:label="Iqaluit">
                                 <title id="title96-6">Iqaluit</title>
                             </rect>
-                            <rect x="937" y="1088.4" width="23.630058" height="16.065697" id="St._John_s"
+                            <rect x="937" y="1088.4" width="16" height="16" id="St._John_s"
                                 style="fill:#1a1a1a;stroke-width:1.06227648" inkscape:label="St. John's">
                                 <title id="title96-34">St. John's</title>
                             </rect>
-                            <rect x="829.31317" y="1209.7877" width="23.630058" height="16.065697" id="Fredericton"
+                            <rect x="829.31317" y="1209.7877" width="16" height="16" id="Fredericton"
                                 style="fill:#1a1a1a;stroke-width:1.06227648" inkscape:label="Fredericton">
                                 <title id="title96-5">Fredericton</title>
                             </rect>
-                            <rect x="864.49152" y="1247.5466" width="12.508483" height="8.1532984" id="Halifax"
+                            <rect x="864.49152" y="1247.5466" width="10" height="10" id="Halifax"
                                 style="fill:#1a1a1a;stroke-width:0.55058503" inkscape:label="Halifax">
                                 <title id="title96-36">Halifax</title>
                             </rect>
-                            <rect x="714.59998" y="1244.4" width="26.899981" height="21.199924" id="Ottawa"
+                            <rect x="714.59998" y="1244.4" width="26" height="26" id="Ottawa"
                                 style="fill:#ff0000;stroke-width:1.30196273" inkscape:label="Ottawa">
                                 <title id="title96-21-9">Ottawa</title>
                             </rect>
-                            <rect x="876.09998" y="1225.8" width="9.4521112" height="5.6317897" id="Charlottetown"
+                            <rect x="876.09998" y="1225.8" width="8" height="8" id="Charlottetown"
                                 style="fill:#1a1a1a;stroke-width:0.39778006" inkscape:label="Charlottetown">
                                 <title id="title96-36-5">Charlottetown</title>
                             </rect>
@@ -224,7 +230,22 @@
                         </div>
                     </div>
     </main>
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">     
 
+            </div> 
+            <div class="col-sm-6">
+                <p>Autor: Lukáš Kůžel</p>
+                <p>&copy; 2021, SŠPU Opava</p>
+                <p>Zdroj informací</p>
+                <p><a href="https://cs.wikipedia.org/wiki/Kanada">Zdroj</a></p>
+            </div>
+        </div> 
+    </footer>
+    <div id="les">
+        <img src="../img/les.jpg" alt="forest">
+    </div>
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
@@ -232,8 +253,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="../geografie/js/geografie.js"></script>
     <script src="../geografie/js/mapka.js"></script>
+    <script src="../js/jquery.js"></script>
 </body>
 
 </html>
