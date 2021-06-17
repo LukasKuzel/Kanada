@@ -157,5 +157,24 @@ h3 {
     left: 45%;
   }
 
-
+  #info{
+      text-align: center;
+    background-color: aquamarine;
+    justify-content: center;
+  }
   
+  svg{
+      background-color: aqua;
+  }
+
+  .uprostred{
+      text-align: center;
+      background-color: aqua;
+  }
+
+  .prvni{
+      font-size: 30px;
+      font-weight: bold;
+      background-color: darkred;
+      color: white;
+  }

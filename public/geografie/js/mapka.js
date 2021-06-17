@@ -8,9 +8,6 @@ $(function () {
         });
 
 
-    let fillPath = $('path').css({ 'fill': 'darkblue' });
-    
-
     $("#mesta").on('change', function(){
         $("#svg100 rect").toggle(500);
     });
@@ -46,7 +43,7 @@ $(function () {
             $(this).css({ 'fill': 'yellow' });
             let mesto = mesta.find(item => { return item.id == id });
             $('#info').fadeOut(1000, function () {
-            $('#info').html(`<div class="col-12"><h2 class="bg-primary">${mesto.city} <small class="text-small">${new Intl.NumberFormat('cs-CS').format(mesto.peoples)} obv.</small></h2></div><div class="col-2"><img src="img/${mesto.sign}" class="img-fluid"></div><div class"col-2"><img src="img/${mesto.flag}" class"img-fluid"></div><div class="col-10">${mesto.text}</div>`)
+            $('#info').html(`<div class="pozadi"></div><div class="col-12"><h2 class="bg-primary">${mesto.city} <small class="text-small">${new Intl.NumberFormat('cs-CS').format(mesto.peoples)} obvyvatel</small></h2></div><div class="col-2"><img src="img/${mesto.sign}" class="img-fluid"></div><div class"col-2"><img src="img/${mesto.flag}" class"img-fluid"></div><div class="col-10">${mesto.text}</div><div class="row"><div class="col-6"><img src="img/${mesto.photo}" class"img-fluid"></div></div></div></div></div>`)
             });
             $('#info').fadeIn(1000);
         });
